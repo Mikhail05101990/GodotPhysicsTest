@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://main_random_scene"]
+[gd_scene load_steps=8 format=3 uid="uid://main_random_scene"]
 
 [ext_resource type="PackedScene" uid="uid://cq8pexh678q6m" path="res://cube.glb" id="cube"]
 [ext_resource type="PackedScene" uid="uid://4crxa7kt6o3l" path="res://mushroom.glb" id="mushroom"]
+[ext_resource type="Script" path="res://CameraController.cs" id="camera_script"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1"]
 sky_top_color = Color(0.38, 0.55, 0.85, 1)
@@ -34,6 +35,7 @@ shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 2.5, 5)
+script = ExtResource("camera_script")
 current = true
 
 [node name="Ground" type="MeshInstance3D" parent="."]
